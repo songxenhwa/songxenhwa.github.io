@@ -107,14 +107,15 @@ h3{
 }
 
 .popUp{
-    display:flex;
+    /* display:flex; */
     /* flex-wrap: wrap; */
-    flex-direction: column;
-    visibility:collapse;
+    /* flex-direction: column; */
+    /* visibility:collapse; */
     justify-content: center;
     margin-top:20px;
-    width:80vw;
-    height:auto;
+    margin-bottom: 20px;
+    /* margin-left:10px; */
+    /* width:80vw; */
 }
 
 .popUpHeading{
@@ -124,6 +125,8 @@ h3{
     color:black;
     padding-left:30px;
     padding-right: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .popUpContent{
@@ -134,6 +137,7 @@ h3{
     background:rgb(30, 30, 30) ;
     color:white;
     padding-bottom:30px;
+    padding-top: 15px;
 }
 
 .popUpContentImg{
@@ -180,7 +184,7 @@ h3{
     /* background:orange;
     opacity:80%;
     width:70%; */
-    width:70%;
+    width:75vw;
     justify-content: center;
     text-align:left;
     /* top right bottom left */
@@ -193,25 +197,45 @@ h3{
     color:orange;
 }
 
+#popUpContainer {
+    display:none;
+    justify-content:center;
+}
 #proj1{
     /* padding:10px; */
     /* vertical-align: middle; */
+    display:none;
 }
 
 #proj2{
     /* padding:10px;
     vertical-align: middle; */
+    display:none;
 }
 
 #proj3{
     /* padding:10px;
     vertical-align: middle; */
     /* margin:auto; */
+    display:none;
 }
 
 #proj4{
     /* padding:auto;
     vertical-align: middle; */
+    display:none;
+}
+
+#proj5{
+    /* padding:auto;
+    vertical-align: middle; */
+    display:none;
+}
+
+#proj6{
+    /* padding:auto;
+    vertical-align: middle; */
+    display:none;
 }
 
 #skillHeading{
@@ -222,6 +246,8 @@ h3{
     display: flex;
     justify-content:center ;
     text-align: left;
+    /* width:80vw; */
+    font-size: 2.5vmin;
 }
 
 
@@ -265,7 +291,7 @@ h3{
         </div>
     </div>
 
-    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
 
     <div class="aboutMe">
         <div id = aboutMeTitle>
@@ -300,7 +326,7 @@ h3{
         </div>
     </div> -->
 
-    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
 
     <div class = myProjects>
         <div id = projectHeading>
@@ -343,192 +369,193 @@ h3{
                     <p>Test</p>
                 </div>
             </div>
-
-            <!-- pop up here -->
-            <div class = popUp id = "proj1">
-                <div class="popUpHeading">
-                    <h2>Next-Gen Virtual Classroom</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">A web-application replica of the ZOOM application. Functionalities includes messaging, webcam, microphone, creating breakout rooms, screen sharing & subscribing.
-                        <br><br>Worked in a team of 4 to developed the middleware (API).
-                        Also collaborated with the front-end and back-end team throughout the development period. Created a basic front-end webpage to test the functionality developed.
-                    </p>
-                    <h3>Programming Skills</h3>
-                    <ul >
-                        <li>Linux</li>
-                            <li>JavaScript</li>    
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>MediaSoup API</li>
-                            <li>TypeScript</li>
-                            
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Familiarising myself the usage of Linux system commands</li>
-                        <li>Learning TypeScript</li>    
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <img class="popUpImg" src="next-gen virtual classroom.jpg">
-                        <img class="popUpImg" src="next-gen virtual classroom2.jpg">
+            <!-- <div id =popUpContainer> -->
+                <!-- pop up here -->
+                <div class = popUp id = "proj1">
+                    <div class="popUpHeading">
+                        <h2>Next-Gen Virtual Classroom</h2>
                     </div>
-                </div>
-            </div>
-
-            <div class = popUp id = "proj2">
-                <div class="popUpHeading">
-                    <h2>Android Music Application</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">An android based music application. It is currently still under development. Users can play music directly imported from devices' files. Does not support streaming. 
-                        <br><br> Upcoming features: <ul><li>Songs sorted in it's album</li><li>Creating playlists</li><li>Searching songs</li></ul>
-                    </p>
-                    <h3>Programming Skills</h3>
-                    <ul >
-                        <li>Java</li>    
-                        <li>Android Development</li>
-                        <li>Android Studios</li>
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Developing the functionalities</li> 
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <img class="popUpImg" src="music-app1.jpg">
-                        <img class="popUpImg" src="music-app2.jpg">
-                    </div>
-                </div>
-            </div>
-
-            <div class = popUp id = "proj3">
-                <div class="popUpHeading">
-                    <h2>Tsunami Detection Simulation</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">A simulator which allows users to input values and produces a log text file consisting of the results of the simulation.
-                        User can set: 
-                        <ul style="columns:1;">
-                            <li>Number of rows when arranging the grid</li>
-                            <li>Number of columns when arranging the grid</li>
-                            <li>Number of iterations the base station should perform</li>
-                            <li>Sea water column height threshold in metres</li>
+                    <div class = popUpContent>
+                        <p align="justify">A web-application replica of the ZOOM application. Functionalities includes messaging, webcam, microphone, creating breakout rooms, screen sharing & subscribing.
+                            <br><br>Worked in a team of 4 to developed the middleware (API).
+                            Also collaborated with the front-end and back-end team throughout the development period. Created a basic front-end webpage to test the functionality developed.
+                        </p>
+                        <h3>Programming Skills</h3>
+                        <ul >
+                            <li>Linux</li>
+                                <li>JavaScript</li>    
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>MediaSoup API</li>
+                                <li>TypeScript</li>
+                                
                         </ul>
-                        This project can be a good way to test the efficiency of parallel computing 
-                        as 3 different machine/OS with similiar number of core processors were used to run the simulation.
-                        The time taken to complete the number of iterations are noted in the log file output.
-                    </p>
-                    <h3>Programming Skills</h3>
-                    <ul >
-                        <li>Linux</li> 
-                        <li>C++</li>
-                        <li>Shell</li>    
-                        <li>CMake</li>
-                        <li>Virtual Machine</li>  
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Implementing parallel programming into the project</li>
-                        <li>First time using C++ to develop a project</li>  
-                        <li>Linux virtual machine slow performance </li>  
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <p>No Image</p>
+                        <h3>Challenges Faced</h3>
+                        <ul class = ulContent>
+                            <li>Familiarising myself the usage of Linux system commands</li>
+                            <li>Learning TypeScript</li>    
+                        </ul>
+                        <h3>Images</h3>
+                        <div class="popUpContentImg">
+                            <img class="popUpImg" src="next-gen virtual classroom.jpg">
+                            <img class="popUpImg" src="next-gen virtual classroom2.jpg">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class = popUp id = "proj4">
-                <div class="popUpHeading">
-                    <h2>Zombie Game</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">A 2D Zombie-themed game developed using Java language implementing object-oriented programming (OOP).
-                        The game was developed after designing it with a UML diagram. 
-                        There are two maps where player can traverse between. There are weapons player can use to kill the zombie which roams around the map.
-                        <br><br>Each turn users are allow to select their action from a list provided. From moving & collecting food/weapons to attacking the zombies.
-                        There are trees and fence on the map which can be use to player advantage to beat the game. Player can also farm which will bear fruits after a few turns. Besides attacking the zombies physically, player can set trap to kill the zombies.
-                        <br><br>A boss, "Mambo Marie" will appear after a few turns with a higher max health compared to other relatives zombies.
-                    </p>
-                    <h3>Programming Skills</h3>
-                    <ul >
-                        <li>Java</li>    
-                        <li>Object-Oriented Programming</li>
-                        <li>Eclipse IDE</li>
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Implementing Object-oriented programming (OOP)</li>
-                        <li>Designing the UML diagram of the game</li>
-                        <li>Too many Java files making it confusing to identify the parent and inheritance class</li>    
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <img class="popUpImg" src="ZombieUML.png">
-                        <img class="popUpImg" src="ZombieClassDiag.png">
-                        <img class="popUpImg" src="ZombieEngClassDiag.png">
+                <div class = popUp id = "proj2">
+                    <div class="popUpHeading">
+                        <h2>Android Music Application</h2>
+                    </div>
+                    <div class = popUpContent>
+                        <p align="justify">An android based music application. It is currently still under development. Users can play music directly imported from devices' files. Does not support streaming. 
+                            <br><br> Upcoming features: <ul><li>Songs sorted in it's album</li><li>Creating playlists</li><li>Searching songs</li></ul>
+                        </p>
+                        <h3>Programming Skills</h3>
+                        <ul >
+                            <li>Java</li>    
+                            <li>Android Development</li>
+                            <li>Android Studios</li>
+                        </ul>
+                        <h3>Challenges Faced</h3>
+                        <ul class = ulContent>
+                            <li>Developing the functionalities</li> 
+                        </ul>
+                        <h3>Images</h3>
+                        <div class="popUpContentImg">
+                            <img class="popUpImg" src="music-app1.jpg">
+                            <img class="popUpImg" src="music-app2.jpg">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class = popUp id = "proj5">
-                <div class="popUpHeading">
-                    <h2>Pong Game</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">Updating soon...</p>
-                    <h3>Programming Skills</h3>
-                    <ul>
-                        <li>JavaScript</li>
-                            <li>TypeScript</li>    
-                            <li>HTML</li>
-                            <li>CSS</li>
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Learning JavaScript and TypeScript</li>  
-                        <li>Use RxJS Observable streams to handle animation and user interaction</li>    
-                        <li>Use proper functional programming style</li>
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <p>No Image</p>
+                <div class = popUp id = "proj3">
+                    <div class="popUpHeading">
+                        <h2>Tsunami Detection Simulation</h2>
+                    </div>
+                    <div class = popUpContent>
+                        <p align="justify">A simulator which allows users to input values and produces a log text file consisting of the results of the simulation.
+                            User can set: 
+                            <ul style="columns:1;">
+                                <li>Number of rows when arranging the grid</li>
+                                <li>Number of columns when arranging the grid</li>
+                                <li>Number of iterations the base station should perform</li>
+                                <li>Sea water column height threshold in metres</li>
+                            </ul>
+                            This project can be a good way to test the efficiency of parallel computing 
+                            as 3 different machine/OS with similiar number of core processors were used to run the simulation.
+                            The time taken to complete the number of iterations are noted in the log file output.
+                        </p>
+                        <h3>Programming Skills</h3>
+                        <ul >
+                            <li>Linux</li> 
+                            <li>C++</li>
+                            <li>Shell</li>    
+                            <li>CMake</li>
+                            <li>Virtual Machine</li>  
+                        </ul>
+                        <h3>Challenges Faced</h3>
+                        <ul class = ulContent>
+                            <li>Implementing parallel programming into the project</li>
+                            <li>First time using C++ to develop a project</li>  
+                            <li>Linux virtual machine slow performance </li>  
+                        </ul>
+                        <h3>Images</h3>
+                        <div class="popUpContentImg">
+                            <p>No Image</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class = popUp id = "proj6">
-                <div class="popUpHeading">
-                    <h2>test</h2>
+                <div class = popUp id = "proj4">
+                    <div class="popUpHeading">
+                        <h2>Zombie Game</h2>
+                    </div>
+                    <div class = popUpContent>
+                        <p align="justify">A 2D Zombie-themed game developed using Java language implementing object-oriented programming (OOP).
+                            The game was developed after designing it with a UML diagram. 
+                            There are two maps where player can traverse between. There are weapons player can use to kill the zombie which roams around the map.
+                            <br><br>Each turn users are allow to select their action from a list provided. From moving & collecting food/weapons to attacking the zombies.
+                            There are trees and fence on the map which can be use to player advantage to beat the game. Player can also farm which will bear fruits after a few turns. Besides attacking the zombies physically, player can set trap to kill the zombies.
+                            <br><br>A boss, "Mambo Marie" will appear after a few turns with a higher max health compared to other relatives zombies.
+                        </p>
+                        <h3>Programming Skills</h3>
+                        <ul >
+                            <li>Java</li>    
+                            <li>Object-Oriented Programming</li>
+                            <li>Eclipse IDE</li>
+                        </ul>
+                        <h3>Challenges Faced</h3>
+                        <ul class = ulContent>
+                            <li>Implementing Object-oriented programming (OOP)</li>
+                            <li>Designing the UML diagram of the game</li>
+                            <li>Too many Java files making it confusing to identify the parent and inheritance class</li>    
+                        </ul>
+                        <h3>Images</h3>
+                        <div class="popUpContentImg">
+                            <img class="popUpImg" src="ZombieUML.png">
+                            <img class="popUpImg" src="ZombieClassDiag.png">
+                            <img class="popUpImg" src="ZombieEngClassDiag.png">
+                        </div>
+                    </div>
                 </div>
-                <div class = popUpContent>
-                    <p>test</p>
-                    <h3>Programming Skills</h3>
-                    <ul>
-                        <li>test</li>
-                            <li>test</li>    
+
+                <div class = popUp id = "proj5">
+                    <div class="popUpHeading">
+                        <h2>Pong Game</h2>
+                    </div>
+                    <div class = popUpContent>
+                        <p align="justify">Updating soon...</p>
+                        <h3>Programming Skills</h3>
+                        <ul>
+                            <li>JavaScript</li>
+                                <li>TypeScript</li>    
+                                <li>HTML</li>
+                                <li>CSS</li>
+                        </ul>
+                        <h3>Challenges Faced</h3>
+                        <ul class = ulContent>
+                            <li>Learning JavaScript and TypeScript</li>  
+                            <li>Use RxJS Observable streams to handle animation and user interaction</li>    
+                            <li>Use proper functional programming style</li>
+                        </ul>
+                        <h3>Images</h3>
+                        <div class="popUpContentImg">
+                            <p>No Image</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = popUp id = "proj6">
+                    <div class="popUpHeading">
+                        <h2>test</h2>
+                    </div>
+                    <div class = popUpContent>
+                        <p>test</p>
+                        <h3>Programming Skills</h3>
+                        <ul>
                             <li>test</li>
-                            <li>test</li>
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>test</li> 
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <img class="popUpImg" src="brabus gt63s interior.jpeg">
-                        <img class="popUpImg" src="brabus rocket 900.jpg">
+                                <li>test</li>    
+                                <li>test</li>
+                                <li>test</li>
+                        </ul>
+                        <h3>Challenges Faced</h3>
+                        <ul class = ulContent>
+                            <li>test</li> 
+                        </ul>
+                        <h3>Images</h3>
+                        <div class="popUpContentImg">
+                            <img class="popUpImg" src="brabus gt63s interior.jpeg">
+                            <img class="popUpImg" src="brabus rocket 900.jpg">
+                        </div>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
         
     </div>
     
-    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
 
 
     <div class = mySkills>
@@ -568,7 +595,7 @@ h3{
     </div>
     
     
-    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
     <!-- Hobbies -->
     <div class = hobbies>
         
@@ -582,15 +609,15 @@ h3{
                 <img class="image" src="bench.webp" draggable="false" />
                 <img class="image" src="coding.jpeg" draggable="false" />
                 <img class="image" src="listenMusic.jpg" draggable="false" />
-                <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                <img class="image" src="sunbathing.jpg" draggable="false" />
               </div>
         </div>
         
     </div>
-    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
     <!-- Extras -->
     <h2 style="color:orange;">Extras</h2>
-    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
     <p style = "font-size:15px;">End Of Page. This page is currently still under development. Thanks For Visiting!</p>
 
 </body>
@@ -601,25 +628,25 @@ h3{
     // global variable
     //  let test = new Boolean(false)
     function openPopUp(proj) {
-        
+
         let temp = "";
         let check = Boolean(false);
         for (let i = 1; i <= 6;i++){
             temp = 'proj' + i;
-            if (document.getElementById(temp).style.visibility == "visible"){
+            if (document.getElementById(temp).style.display == "block"){
                 check = Boolean(true);
                 break;
             }
         }
         
         if (check == Boolean(true)){
-            document.getElementById(temp).style.visibility = "collapse";
-            document.getElementById(proj).style.visibility = "visible";
+            document.getElementById(temp).style.display = "none";
+            document.getElementById(proj).style.display = "block";
         } else {
-            document.getElementById(proj).style.visibility = "visible";
+            document.getElementById(proj).style.display = "block";
         }
         if (proj == temp){
-            document.getElementById(temp).style.visibility = "collapse";
+            document.getElementById(temp).style.display = "none";
         }
     }
 
