@@ -1,0 +1,681 @@
+<html>
+<head>
+<title> Song Xen Hwa's Webpage'</title>
+
+<style>
+
+/* class */
+body {
+    /* background: blanchedalmond; */
+    /* background: rgb(136, 133, 133); */
+    background: rgb(40, 40, 40);
+    padding: 10px;
+    /* overflow:hidden; */
+    /* display:flex; */
+
+}
+
+.introduction{
+    width:100%;
+    padding-bottom: 20px;
+    display:flex;
+    flex-direction: column;
+}
+
+.aboutMe{
+    /* background: rgb(100, 107, 107); */
+    /* background: #0e0d0d; */
+    /* display: flex; */
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 20px;
+    
+}
+
+.aboutMeContent{
+    display:flex;
+    flex-wrap:wrap ;
+    /* flex-direction: column; */
+    justify-content:center;
+}
+
+.aboutMeContent > .image{
+    width:20x;
+    height:2px;
+}
+
+.myProjects{
+    text-align: center;
+    font-size: 21px;
+    color:white;
+}
+.projectTiles{
+    display:flex;
+    flex-wrap:wrap ;
+    justify-content:center;
+}
+
+.tiles{
+    /* width: 200px;
+    height:200px; */
+    /* top right bottom left */
+    /* padding: auto 20px auto 20px; */
+    margin: 15px;
+    background:rgb(30, 30, 30) ;
+   }
+
+.tiles__overlay{
+    width: 200px;
+    height:200px;
+    color:blanchedalmond;
+    
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    /* transition:opacity 0.3s; */
+    /* width:100%;
+    height:100%; */
+}
+.tiles:hover{
+    background: orange;
+    /* opacity:0.85; */
+}
+.tiles__overlay:hover{
+    color:black;
+}
+
+.mySkills{
+    text-align: center;
+    font-size: 21px;
+}
+ul{
+    columns:4;
+}
+
+li{
+    /* padding:2px; */
+    padding-right:10px;
+    text-align: left;
+}
+h3{
+    color:orange;
+}
+
+.popUp{
+    display:flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    visibility:collapse;
+    justify-content: center;
+    margin-top:20px;
+    width:80vw;
+    height:auto;
+}
+
+.popUpHeading{
+    width:80vw;
+    text-align: left;
+    background:orange;
+    color:black;
+    padding-left:30px;
+    padding-right: 30px;
+}
+
+.popUpContent{
+    width:80vw;
+    text-align:left;
+    padding-left:30px;
+    padding-right: 30px;
+    background:rgb(30, 30, 30) ;
+    color:white;
+    padding-bottom:30px;
+}
+
+.popUpContentImg{
+    display:flex;
+    flex-wrap:wrap;
+    padding-left:20px;
+    padding-right: 30px;
+}
+
+.popUpImg{
+    max-width: 30%;
+    height:auto;
+    margin: 8px;
+}
+.ulContent{
+    columns: 1;
+}
+
+.hobbyTiles{
+    position:relative;
+    height: 430px;
+    overflow: hidden;
+}
+
+
+/* id */
+#name{
+    font-size: 22px;
+    color: orange;
+}
+
+#current{
+    color: white;
+    font-size: 22px;
+} 
+
+#aboutMeTitle{
+    /* background:#000000 ; */
+    color:orange;
+    font-size: 18px;
+}
+
+#content{
+    /* background:orange;
+    opacity:80%;
+    width:70%; */
+    width:70%;
+    justify-content: center;
+    text-align:left;
+    /* top right bottom left */
+    padding: 10px 20px 10px 30px;
+    font-size: 20px;
+    color:white;
+}
+
+#projectHeading{
+    color:orange;
+}
+
+#proj1{
+    /* padding:10px; */
+    /* vertical-align: middle; */
+}
+
+#proj2{
+    /* padding:10px;
+    vertical-align: middle; */
+}
+
+#proj3{
+    /* padding:10px;
+    vertical-align: middle; */
+    /* margin:auto; */
+}
+
+#proj4{
+    /* padding:auto;
+    vertical-align: middle; */
+}
+
+#skillHeading{
+    color:orange;
+}
+
+#skills{
+    display: flex;
+    justify-content:center ;
+    text-align: left;
+}
+
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  /* left: 20%;
+  top: 0%; */
+  transform: translate(15%, 0%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track > .image {
+  /* width: 35vmin;
+  height: 50vmin; */
+  width:300px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 100% center;
+  opacity: 0.8;
+}
+
+
+
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+
+
+<body>
+    <script src = "main.js"></script>
+    <div class = "introduction">
+        <!-- picture here -->
+        <!-- <img style="max-width:30% ; justify-content:center;margin:auto;" src="brabus gt63s interior.jpeg"> -->
+        <div id = "name">
+            <h1 style="text-align: center">Song Xen Hwa</h1>
+        </div>
+        <div id = current>
+            <p style="text-align: center">Advanced Computer Science Graduate from Monash University</p>
+        </div>
+    </div>
+
+    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+
+    <div class="aboutMe">
+        <div id = aboutMeTitle>
+            <h1>About Me</h1>
+        </div>
+        <div class = aboutMeContent>
+            <div id = content>
+                <p align="justify"> A recent computer science gradute from Monash Univeristy Clayton campus. I specialized in advanced computer science. I love channeling my creativity in creating and developing applications. I am familiar with various programming languages particularly Python & Java.
+                    <br><br>I was a frequent volunteer throughout my university period. I promoted & shared the wonders & joy university life to the students. Volnteered as a graduation ambassador and guide famillies and guests around the venue to ensure event success.
+                    <br><br>Monash Univeristy Clayton 캠퍼스에서 최근에 컴퓨터 과학을 졸업했습니다. 저는 고급 컴퓨터 공학을 전공했습니다. 저는 응용 프로그램을 만들고 개발할 때 창의력을 발휘하는 것을 좋아합니다. 다양한 프로그래밍 언어, 특히 Python 및 Java에 익숙합니다.
+                    <br><br>私は最近、モナッシュ大学クレイトン キャンパスのコンピューター サイエンスを卒業しました。 私は高度なコンピューターサイエンスを専攻しました。 アプリケーションを作成および開発するときは、創造的であることが好きです。 さまざまなプログラミング言語、特に Python と Java に精通していること。
+                    <br><br>我最近毕业于莫纳什大学克莱顿校区的计算机科学专业。 我主修高级计算机科学。 我喜欢在创建和开发应用程序时发挥创意。 熟悉各种编程语言，尤其是Python和Java。
+                </p>
+                <br>
+                <a href="https://github.com/songxenhwa" target="_blank" ><img class="image" style="width:60x;height:60px;" src="githubIcon.png"></a>
+                <a href="https://www.linkedin.com/in/xenhwasong/" target="_blank"><img class="image" style="width:60x;height:60px;" src="linkeInLogo.png"></a>
+            </div>
+        </div>
+
+    </div>
+
+<!-- 
+    <div class = aboutMe>
+        <div id = aboutMeTitle>
+            <h1>About Me</h1>
+        </div>
+        <div id = aboutMeContent>
+            <p> A recent computer science gradute from Monash Univeristy Clayton campus. I specialized in advance d computer science. I love channeling my creativity in creating and developing applications. I am familiar with various programming languages particulalrly Python & Java.
+                <br><br>Was a frequent volunteer throughout my university period. Promoted and shared the wonderful university life to the students. Volnteered as a graduation ambassador and guide famillies and guests around the venue to ensure event success.
+                <br><br>iawserijj iaeritgnia aujwserhga weuiauiowenfiaweu nawsefawef asdfiol oioawer89y9832 hasfjasje4 oiiisdifas nahh dis aint it mate you high as fkk
+            </p>
+        </div>
+    </div> -->
+
+    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+
+    <div class = myProjects>
+        <div id = projectHeading>
+            <h2> My Projects</h2>
+        </dv>
+        <div class = projectTiles>
+
+            <div class = tiles onclick="openPopUp('proj1')">
+                <div class = tiles__overlay>
+                    <p>Next-Gen Virtual Classroom</p>
+                </div>
+            </div>
+
+            <div class = tiles onclick="openPopUp('proj2')">
+                <div class = tiles__overlay>
+                    <p>Android Music Application</p>
+                </div>
+            </div>
+            
+            <div class = tiles onclick="openPopUp('proj3')">
+                <div class = tiles__overlay>
+                    <p>Tsunami Detection Simulator</p>
+                </div>
+            </div>
+            
+            <div class = tiles onclick="openPopUp('proj4')">
+                <div class = tiles__overlay>
+                    <p>Zombie Game</p>
+                </div>
+            </div>
+
+            <div class = tiles onclick="openPopUp('proj5')">
+                <div class = tiles__overlay >
+                    <p>Pong Game</p>
+                </div>
+            </div>
+
+            <div class = tiles onclick="openPopUp('proj6')">
+                <div class = tiles__overlay >
+                    <p>Test</p>
+                </div>
+            </div>
+
+            <!-- pop up here -->
+            <div class = popUp id = "proj1">
+                <div class="popUpHeading">
+                    <h2>Next-Gen Virtual Classroom</h2>
+                </div>
+                <div class = popUpContent>
+                    <p align="justify">A web-application replica of the ZOOM application. Functionalities includes messaging, webcam, microphone, creating breakout rooms, screen sharing & subscribing.
+                        <br><br>Worked in a team of 4 to developed the middleware (API).
+                        Also collaborated with the front-end and back-end team throughout the development period. Created a basic front-end webpage to test the functionality developed.
+                    </p>
+                    <h3>Programming Skills</h3>
+                    <ul >
+                        <li>Linux</li>
+                            <li>JavaScript</li>    
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>MediaSoup API</li>
+                            <li>TypeScript</li>
+                            
+                    </ul>
+                    <h3>Challenges Faced</h3>
+                    <ul class = ulContent>
+                        <li>Familiarising myself the usage of Linux system commands</li>
+                        <li>Learning TypeScript</li>    
+                    </ul>
+                    <h3>Images</h3>
+                    <div class="popUpContentImg">
+                        <img class="popUpImg" src="next-gen virtual classroom.jpg">
+                        <img class="popUpImg" src="next-gen virtual classroom2.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class = popUp id = "proj2">
+                <div class="popUpHeading">
+                    <h2>Android Music Application</h2>
+                </div>
+                <div class = popUpContent>
+                    <p align="justify">An android based music application. It is currently still under development. Users can play music directly imported from devices' files. Does not support streaming. 
+                        <br><br> Upcoming features: <ul><li>Songs sorted in it's album</li><li>Creating playlists</li><li>Searching songs</li></ul>
+                    </p>
+                    <h3>Programming Skills</h3>
+                    <ul >
+                        <li>Java</li>    
+                        <li>Android Development</li>
+                        <li>Android Studios</li>
+                    </ul>
+                    <h3>Challenges Faced</h3>
+                    <ul class = ulContent>
+                        <li>Developing the functionalities</li> 
+                    </ul>
+                    <h3>Images</h3>
+                    <div class="popUpContentImg">
+                        <img class="popUpImg" src="music-app1.jpg">
+                        <img class="popUpImg" src="music-app2.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class = popUp id = "proj3">
+                <div class="popUpHeading">
+                    <h2>Tsunami Detection Simulation</h2>
+                </div>
+                <div class = popUpContent>
+                    <p align="justify">A simulator which allows users to input values and produces a log text file consisting of the results of the simulation.
+                        User can set: 
+                        <ul style="columns:1;">
+                            <li>Number of rows when arranging the grid</li>
+                            <li>Number of columns when arranging the grid</li>
+                            <li>Number of iterations the base station should perform</li>
+                            <li>Sea water column height threshold in metres</li>
+                        </ul>
+                        This project can be a good way to test the efficiency of parallel computing 
+                        as 3 different machine/OS with similiar number of core processors were used to run the simulation.
+                        The time taken to complete the number of iterations are noted in the log file output.
+                    </p>
+                    <h3>Programming Skills</h3>
+                    <ul >
+                        <li>Linux</li> 
+                        <li>C++</li>
+                        <li>Shell</li>    
+                        <li>CMake</li>
+                        <li>Virtual Machine</li>  
+                    </ul>
+                    <h3>Challenges Faced</h3>
+                    <ul class = ulContent>
+                        <li>Implementing parallel programming into the project</li>
+                        <li>First time using C++ to develop a project</li>  
+                        <li>Linux virtual machine slow performance </li>  
+                    </ul>
+                    <h3>Images</h3>
+                    <div class="popUpContentImg">
+                        <p>No Image</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = popUp id = "proj4">
+                <div class="popUpHeading">
+                    <h2>Zombie Game</h2>
+                </div>
+                <div class = popUpContent>
+                    <p align="justify">A 2D Zombie-themed game developed using Java language implementing object-oriented programming (OOP).
+                        The game was developed after designing it with a UML diagram. 
+                        There are two maps where player can traverse between. There are weapons player can use to kill the zombie which roams around the map.
+                        <br><br>Each turn users are allow to select their action from a list provided. From moving & collecting food/weapons to attacking the zombies.
+                        There are trees and fence on the map which can be use to player advantage to beat the game. Player can also farm which will bear fruits after a few turns. Besides attacking the zombies physically, player can set trap to kill the zombies.
+                        <br><br>A boss, "Mambo Marie" will appear after a few turns with a higher max health compared to other relatives zombies.
+                    </p>
+                    <h3>Programming Skills</h3>
+                    <ul >
+                        <li>Java</li>    
+                        <li>Object-Oriented Programming</li>
+                        <li>Eclipse IDE</li>
+                    </ul>
+                    <h3>Challenges Faced</h3>
+                    <ul class = ulContent>
+                        <li>Implementing Object-oriented programming (OOP)</li>
+                        <li>Designing the UML diagram of the game</li>
+                        <li>Too many Java files making it confusing to identify the parent and inheritance class</li>    
+                    </ul>
+                    <h3>Images</h3>
+                    <div class="popUpContentImg">
+                        <img class="popUpImg" src="ZombieUML.png">
+                        <img class="popUpImg" src="ZombieClassDiag.png">
+                        <img class="popUpImg" src="ZombieEngClassDiag.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class = popUp id = "proj5">
+                <div class="popUpHeading">
+                    <h2>Pong Game</h2>
+                </div>
+                <div class = popUpContent>
+                    <p align="justify">Updating soon...</p>
+                    <h3>Programming Skills</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                            <li>TypeScript</li>    
+                            <li>HTML</li>
+                            <li>CSS</li>
+                    </ul>
+                    <h3>Challenges Faced</h3>
+                    <ul class = ulContent>
+                        <li>Learning JavaScript and TypeScript</li>  
+                        <li>Use RxJS Observable streams to handle animation and user interaction</li>    
+                        <li>Use proper functional programming style</li>
+                    </ul>
+                    <h3>Images</h3>
+                    <div class="popUpContentImg">
+                        <p>No Image</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = popUp id = "proj6">
+                <div class="popUpHeading">
+                    <h2>test</h2>
+                </div>
+                <div class = popUpContent>
+                    <p>test</p>
+                    <h3>Programming Skills</h3>
+                    <ul>
+                        <li>test</li>
+                            <li>test</li>    
+                            <li>test</li>
+                            <li>test</li>
+                    </ul>
+                    <h3>Challenges Faced</h3>
+                    <ul class = ulContent>
+                        <li>test</li> 
+                    </ul>
+                    <h3>Images</h3>
+                    <div class="popUpContentImg">
+                        <img class="popUpImg" src="brabus gt63s interior.jpeg">
+                        <img class="popUpImg" src="brabus rocket 900.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+
+
+    <div class = mySkills>
+        <div id = skillHeading>
+            <h2> Skills</h2>
+        </div>
+        <div id = skills>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>    
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>NodeJs</li>
+                <li>Android Development</li>
+                <li>MongoDB</li>  
+                <li>JavaScript</li>  
+                <li>TypeScript</li>    
+                <li>C</li>
+                <li>Angular</li>
+                <li>User Interface Design</li>
+                <li>Database Queries</li>
+                <li>SQL</li>  
+                <li>NoSQL</li>
+                <li>Google Firebase</li>  
+                <li>Git</li>  
+                <li>Figma</li>  
+                <li>Linux</li>
+                <li>GitHub</li>
+                <li>PostMan</li>
+                <li>Visual Studios</li>  
+                <li>Android Studio</li>
+                <li>Pycharm</li>
+                <li>Python IDLE</li>
+                <li>Virtual Machine</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <!-- Hobbies -->
+    <div class = hobbies>
+        
+        <h2 style="color:orange;">Hobbies</h2>
+        <div class="hobbyTiles">
+            <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <img class="image" src="swimming.jpg" draggable="false" />
+                <img class="image" src="cycling.jpg" draggable="false" />
+                <img class="image" src="jogging.jpg" draggable="false" />
+                <img class="image" src="forza5.jpg" draggable="false" />
+                <img class="image" src="bench.webp" draggable="false" />
+                <img class="image" src="coding.jpeg" draggable="false" />
+                <img class="image" src="listenMusic.jpg" draggable="false" />
+                <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+              </div>
+        </div>
+        
+    </div>
+    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <!-- Extras -->
+    <h2 style="color:orange;">Extras</h2>
+    <hr style = "size:3px;color:orange;margin-left:20%;margin-right:20%">
+    <p style = "font-size:15px;">End Of Page. This page is currently still under development. Thanks For Visiting!</p>
+
+</body>
+</html>
+
+
+<script>
+    // global variable
+    //  let test = new Boolean(false)
+    function openPopUp(proj) {
+        
+        let temp = "";
+        let check = Boolean(false);
+        for (let i = 1; i <= 6;i++){
+            temp = 'proj' + i;
+            if (document.getElementById(temp).style.visibility == "visible"){
+                check = Boolean(true);
+                break;
+            }
+        }
+        
+        if (check == Boolean(true)){
+            document.getElementById(temp).style.visibility = "collapse";
+            document.getElementById(proj).style.visibility = "visible";
+        } else {
+            document.getElementById(proj).style.visibility = "visible";
+        }
+        if (proj == temp){
+            document.getElementById(temp).style.visibility = "collapse";
+        }
+    }
+
+
+
+// find a way to scroll right till first pic mis in center
+const track = document.getElementById("image-track");
+
+const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+
+const handleOnUp = () => {
+  track.dataset.mouseDownAt = "0";  
+  track.dataset.prevPercentage = track.dataset.percentage;
+}
+
+const handleOnMove = e => {
+  if(track.dataset.mouseDownAt === "0") return;
+  
+  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+        maxDelta = window.innerWidth / 2;
+  
+  const percentage = (mouseDelta / maxDelta) * -100,
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 15), -85);
+  
+  track.dataset.percentage = nextPercentage;
+  
+  track.animate({
+    transform: `translate(${nextPercentage}%, 0%)`
+  }, { duration: 1200, fill: "forwards" });
+  
+  for(const image of track.getElementsByClassName("image")) {
+    image.animate({
+      objectPosition: `${70 + nextPercentage}% center`
+    }, { duration: 1200, fill: "forwards" });
+  }
+}
+
+window.onmousedown = e => handleOnDown(e);
+
+window.ontouchstart = e => handleOnDown(e.touches[0]);
+
+window.onmouseup = e => handleOnUp(e);
+
+window.ontouchend = e => handleOnUp(e.touches[0]);
+
+window.onmousemove = e => handleOnMove(e);
+
+window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+    // function myFunction() {
+    //     if (document.getElementById("proj1").style.visibility == "visible"){
+    //         document.getElementById("proj1").style.visibility = "hidden";
+    //     } else{
+    //         document.getElementById("proj1").style.visibility = "visible";
+    //     }
+    // }
+</script>
+
