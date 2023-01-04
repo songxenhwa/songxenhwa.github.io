@@ -2,9 +2,9 @@
 
 ##Issuees Discovered:
 <p>
-> Pop up container still takes up space even when not visible (Solved)
+> Pop up container still takes up space even when not visible **(Solved)**
   <br>
-> Skills section list goes off screen when window was resized (Solved)
+> Skills section list goes off screen when window was resized **(Solved)**
   <br>
 > Image slider would not work if the project tiles were clicked first
   <br>
