@@ -145,11 +145,13 @@ h3{
     flex-wrap:wrap;
     padding-left:20px;
     padding-right: 30px;
+    align-items: flex-start;
 }
 
 .popUpImg{
-    max-width: 30%;
-    height:auto;
+    max-width: 20vw;
+    width:80vw;
+    /* gap: 8px;; */
     margin: 8px;
 }
 .ulContent{
@@ -201,40 +203,9 @@ h3{
     display:none;
     justify-content:center;
 }
-#proj1{
+#proj1, #proj2,#proj3, #proj4,#proj5{
     /* padding:10px; */
     /* vertical-align: middle; */
-    display:none;
-}
-
-#proj2{
-    /* padding:10px;
-    vertical-align: middle; */
-    display:none;
-}
-
-#proj3{
-    /* padding:10px;
-    vertical-align: middle; */
-    /* margin:auto; */
-    display:none;
-}
-
-#proj4{
-    /* padding:auto;
-    vertical-align: middle; */
-    display:none;
-}
-
-#proj5{
-    /* padding:auto;
-    vertical-align: middle; */
-    display:none;
-}
-
-#proj6{
-    /* padding:auto;
-    vertical-align: middle; */
     display:none;
 }
 
@@ -364,11 +335,7 @@ h3{
                 </div>
             </div>
 
-            <div class = tiles onclick="openPopUp('proj6')">
-                <div class = tiles__overlay >
-                    <p>Test</p>
-                </div>
-            </div>
+         
             <!-- <div id =popUpContainer> -->
                 <!-- pop up here -->
                 <div class = popUp id = "proj1">
@@ -376,9 +343,16 @@ h3{
                         <h2>Next-Gen Virtual Classroom</h2>
                     </div>
                     <div class = popUpContent>
-                        <p align="justify">A web-application replica of the ZOOM application. Functionalities includes messaging, webcam, microphone, creating breakout rooms, screen sharing & subscribing.
-                            <br><br>Worked in a team of 4 to developed the middleware (API).
-                            Also collaborated with the front-end and back-end team throughout the development period. Created a basic front-end webpage to test the functionality developed.
+                        <p align="justify">A web application replica of the zoom application. This project was developed in a team of 4 to develop middleware (API). A basic webpage is created to test the functionality Team collaborated with the front-end and back-end team throughout the development period. 
+                            <br><br> Features of project includes:
+                            <ul style="columns:1;">
+                                <li>Mesaaging</li>
+                                <li>Webcam</li>
+                                <li>Microphone</li>
+                                <li>Creating Breakout Rooms</li>
+                                <li>Screen Sharing</li>
+                                <li>Subscribing to User</li>
+                            </ul>
                         </p>
                         <h3>Programming Skills</h3>
                         <ul >
@@ -408,8 +382,13 @@ h3{
                         <h2>Android Music Application</h2>
                     </div>
                     <div class = popUpContent>
-                        <p align="justify">An android based music application. It is currently still under development. Users can play music directly imported from devices' files. Does not support streaming. 
-                            <br><br> Upcoming features: <ul><li>Songs sorted in it's album</li><li>Creating playlists</li><li>Searching songs</li></ul>
+                        <p align="justify">An android based music application. It is still currently under development. Users can play music directly imported from device's files. Does not support streaming. 
+                            <br><br> Upcoming features: 
+                            <ul style="columns:1;">
+                                <li>Songs seperated by albums</li>
+                                <li>Creating playlists</li>
+                                <li>Searching songs</li>
+                            </ul>
                         </p>
                         <h3>Programming Skills</h3>
                         <ul >
@@ -420,6 +399,7 @@ h3{
                         <h3>Challenges Faced</h3>
                         <ul class = ulContent>
                             <li>Developing the functionalities</li> 
+                            <li>Retrieving & displaying the album image of the songs</li>
                         </ul>
                         <h3>Images</h3>
                         <div class="popUpContentImg">
@@ -435,6 +415,9 @@ h3{
                     </div>
                     <div class = popUpContent>
                         <p align="justify">A simulator which allows users to input values and produces a log text file consisting of the results of the simulation.
+                            This project was created to test the efficiency of parallel computing 
+                            from 3 different machine/OS with similiar number of core processors.
+                            The time taken to complete the number of iterations are noted in the log file output.
                             User can set: 
                             <ul style="columns:1;">
                                 <li>Number of rows when arranging the grid</li>
@@ -493,7 +476,8 @@ h3{
                         </ul>
                         <h3>Images</h3>
                         <div class="popUpContentImg">
-                            <img class="popUpImg" src="ZombieUML.png">
+                            <img class="popUpImg" src="zombieMap.jpg">
+                            <img class="popUpImg" src="zombieActionList.jpg">
                             <img class="popUpImg" src="ZombieClassDiag.png">
                             <img class="popUpImg" src="ZombieEngClassDiag.png">
                         </div>
@@ -521,32 +505,7 @@ h3{
                         </ul>
                         <h3>Images</h3>
                         <div class="popUpContentImg">
-                            <p>No Image</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class = popUp id = "proj6">
-                    <div class="popUpHeading">
-                        <h2>test</h2>
-                    </div>
-                    <div class = popUpContent>
-                        <p>test</p>
-                        <h3>Programming Skills</h3>
-                        <ul>
-                            <li>test</li>
-                                <li>test</li>    
-                                <li>test</li>
-                                <li>test</li>
-                        </ul>
-                        <h3>Challenges Faced</h3>
-                        <ul class = ulContent>
-                            <li>test</li> 
-                        </ul>
-                        <h3>Images</h3>
-                        <div class="popUpContentImg">
-                            <img class="popUpImg" src="brabus gt63s interior.jpeg">
-                            <img class="popUpImg" src="brabus rocket 900.jpg">
+                            <p>Updating soon...</p>
                         </div>
                     </div>
                 </div>
@@ -573,7 +532,7 @@ h3{
                 <li>MongoDB</li>  
                 <li>JavaScript</li>  
                 <li>TypeScript</li>    
-                <li>C</li>
+                <li>C++</li>
                 <li>Angular</li>
                 <li>User Interface Design</li>
                 <li>Database Queries</li>
@@ -628,10 +587,10 @@ h3{
     // global variable
     //  let test = new Boolean(false)
     function openPopUp(proj) {
-
+        
         let temp = "";
         let check = Boolean(false);
-        for (let i = 1; i <= 6;i++){
+        for (let i = 1; i <= 5;i++){
             temp = 'proj' + i;
             if (document.getElementById(temp).style.display == "block"){
                 check = Boolean(true);
@@ -639,17 +598,17 @@ h3{
             }
         }
         
+        document.getElementById(proj).style.display = "block";
         if (check == Boolean(true)){
             document.getElementById(temp).style.display = "none";
             document.getElementById(proj).style.display = "block";
-        } else {
-            document.getElementById(proj).style.display = "block";
+            if (proj == temp){
+                document.getElementById(temp).style.display = "none";
+            }
         }
-        if (proj == temp){
-            document.getElementById(temp).style.display = "none";
-        }
+        
+        
     }
-
 
 
 // find a way to scroll right till first pic mis in center
