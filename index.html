@@ -37,13 +37,17 @@ body {
 .aboutMeContent{
     display:flex;
     flex-wrap:wrap ;
+    padding-left:20px;
     /* flex-direction: column; */
     justify-content:center;
 }
 
+.aboutMeImg{
+    width: 50vm;
+    padding: 10px;
+}
 .aboutMeContent > .image{
-    width:20x;
-    height:2px;
+    width:100%;
 }
 
 .myProjects{
@@ -67,8 +71,8 @@ body {
    }
 
 .tiles__overlay{
-    width: 200px;
-    height:200px;
+    width: 20vmin;
+    height:20vmin;
     color:blanchedalmond;
     
     display: flex;
@@ -89,6 +93,9 @@ body {
     color:black;
 }
 
+.tiles__overlay > p{
+    font-size: 3vmin;
+}
 .mySkills{
     text-align: center;
     font-size: 21px;
@@ -186,11 +193,12 @@ h3{
     /* background:orange;
     opacity:80%;
     width:70%; */
-    width:75vw;
-    justify-content: center;
+    width: 100vmin;
+    /* justify-content: center; */
     text-align:left;
     /* top right bottom left */
-    padding: 10px 20px 10px 30px;
+    /* padding: 10px 20px 10px 30px; */
+    padding:10px;
     font-size: 20px;
     color:white;
 }
@@ -269,9 +277,12 @@ h3{
             <h1>About Me</h1>
         </div>
         <div class = aboutMeContent>
+            <div class = aboutMeImg>
+                <img style="width:30vmin;" src="githubIcon.png">
+            </div>
             <div id = content >
                 <h3 style="color:white; font-size: 30px;"  > My name is Song Xen Hwa, and a Computer Science graduate. I do and enjoy designing, coding & developing.</h3>
-                <p align="justify"></p>
+                <p align="justify">
                     Recent gradute from Monash Univeristy Clayton with a bachelor's degree in Computer Science specialising advanced computer science. I am familiar with various programming languages particularly Python & Java. I love to channel my creativity in developing & designing applications 
                     <br><br>I was a frequent volunteer throughout my university period. I promoted & shared the wonders & joy university life to the students. Volnteered as a graduation ambassador and guide famillies and guests around the venue to ensure event success.
                     </p>
@@ -282,19 +293,6 @@ h3{
         </div>
 
     </div>
-
-<!-- 
-    <div class = aboutMe>
-        <div id = aboutMeTitle>
-            <h1>About Me</h1>
-        </div>
-        <div id = aboutMeContent>
-            <p> A recent computer science gradute from Monash Univeristy Clayton campus. I specialized in advance d computer science. I love channeling my creativity in creating and developing applications. I am familiar with various programming languages particulalrly Python & Java.
-                <br><br>Was a frequent volunteer throughout my university period. Promoted and shared the wonderful university life to the students. Volnteered as a graduation ambassador and guide famillies and guests around the venue to ensure event success.
-                <br><br>iawserijj iaeritgnia aujwserhga weuiauiowenfiaweu nawsefawef asdfiol oioawer89y9832 hasfjasje4 oiiisdifas nahh dis aint it mate you high as fkk
-            </p>
-        </div>
-    </div> -->
 
     <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
 
@@ -487,7 +485,9 @@ h3{
                     <h2>Pong Game</h2>
                 </div>
                 <div class = popUpContent>
-                    <p align="justify">Updating soon...</p>
+                    <p align="justify">A basic one-player pong game with a paddle movable by keyboard. The second paddle (right/ opponent) will follow the ball.
+                        <br><br>The ball will bounce of a random direction when hit by the paddle. Besides direction, the speed of the ball will also differs when hit at a certain angle. 
+                        <br><br>To win, player will have to score 7 points against the opponent. Player will be able to restart after the game finishes. </p>
                     <h3>Programming Skills</h3>
                     <ul>
                         <li>JavaScript</li>
@@ -653,12 +653,5 @@ window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
-    // function myFunction() {
-    //     if (document.getElementById("proj1").style.visibility == "visible"){
-    //         document.getElementById("proj1").style.visibility = "hidden";
-    //     } else{
-    //         document.getElementById("proj1").style.visibility = "visible";
-    //     }
-    // }
 </script>
 
