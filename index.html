@@ -1,670 +1,867 @@
-<html>
-<head>
-<title> Song Xen Hwa's Webpage'</title>
+<html lang="en">
+ 
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- <title> -->
+        <title>Song Xen Hwa</title>
+        <link rel="icon" type="image/png" href="../songxenhwa.github.io-main/img/webpage/kermit-depressed.png">
+        <!--/. Description-->
+        <!-- <meta name="description" content="<?php echo $page_description ?>"> -->
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!--/.FONT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 
-<style>
+        <link rel="stylesheet" href="../songxenhwa.github.io-main/lib/css/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="../songxenhwa.github.io-main/lib/css/owl-carousel/owl.theme.default.min.css">
+    <!--/.GLOBAL-->
+        <style>
+            body{
+                font-family: 'Space Mono',sans-serif;
+                background-color: #111
+            }
+            .container-1440{
+                max-width:1440px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .fw-semibold{
+                font-weight:600;
+            }
+            .parallax-header{
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed
+            }
+            .parallax-overlay-header{
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+            .menuOpt{
+                top:2%;
+                right:2%
+            }
+            .parallax-header-title{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            #about-me{
+                height:100vh;
+                /* display: flex;
+                align-items: center; */
+            }
+            .sideMenuOpt {
+                height: 100%;
+                width: 25%;
+                position: fixed;
+                display:none;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
 
-/* class */
-body {
-    /* background: blanchedalmond; */
-    /* background: rgb(136, 133, 133); */
-    background: rgb(40, 40, 40);
-    padding: 10px;
-    /* overflow:hidden; */
-    /* display:flex; */
+            .sideMenuOpt a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
 
-}
+            .sideMenuOpt a:hover {
+                color: #f1f1f1;
+            }
 
-.introduction{
-    width:100%;
-    padding-bottom: 20px;
-    display:flex;
-    flex-direction: column;
-}
+            .sideMenuOpt .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
 
-.aboutMe{
-    /* background: rgb(100, 107, 107); */
-    /* background: #0e0d0d; */
-    /* display: flex; */
-    /* padding-left: 20px;
-    padding-right: 20px; */
-    text-align: center;
-    font-size: 21px;
-    margin-bottom: 20px;
-    
-}
+            .about-me-img{
+                border-radius: 5%;
+                max-height: 150px;
+                max-width: 150px;
+            }
 
-.aboutMeContent{
-    display:flex;
-    flex-wrap:wrap ;
-    padding-left:20px;
-    /* flex-direction: column; */
-    justify-content:center;
-}
+            .about-me-name{
+                color: rgba(255,248,238,.51);
+                letter-spacing: 5px
+            }
 
-.aboutMeImg{
-    width: 50vm;
-    padding: 10px;
-}
-.aboutMeContent > .image{
-    width:100%;
-}
+            .about-me-role{
+                background-image: linear-gradient(56deg,#9660f9,#40f384);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
 
-.myProjects{
-    text-align: center;
-    font-size: 21px;
-    color:white;
-}
-.projectTiles{
-    display:flex;
-    flex-wrap:wrap ;
-    justify-content:center;
-}
+            .about-me-desc{
+                /* color: rgba(255,248,238,.51); */
+            }
 
-.tiles{
-    /* width: 200px;
-    height:200px; */
-    /* top right bottom left */
-    /* padding: auto 20px auto 20px; */
-    margin: 15px;
-    background:rgb(30, 30, 30) ;
-   }
+            .projHeading{
+                color:#fff8ee;
+                opacity: 50%;
+            }
+            .projCard{
+                border:2px solid #fff8ee;
+                border-radius:20px;
+                transition: box-shadow 0.8s ease
+            }
+            .projCard:hover {
+                box-shadow: 0 0 50px 5px rgba(77,40,169,.8);;
+            }
+            .projCardTitle{
+                background-color: rgba(77,40,169,.8);
+                color: #47e98d;
+                width: fit-content;
+            }
+            .projCardBtn{
+                border-radius: 7px;
+                border:2px solid #fff8ee;
+                width:8rem;
+                height: 40px;
+                transition: 0.3s ease
+            }
+            .projCardBtn:hover{
+                cursor: pointer;
+                background-color: rgba(77,40,169,.8);
+                color:#40f384
+            }
+            .projModalBtn{
+                border-radius: 0.5rem;
+                border:2px solid #fff8ee;
+                height: 40px;
+                width:auto;
+                transition: 0.3s ease
+            }
+            .projModalBtn:hover{
+                cursor: pointer;
+                background-color: rgba(77,40,169,.8) !important;
+                color:#40f384 !important;
+            }
+            .crsbtn{
+                color:#47e98d;
+            }
+            .popUpModal{
+                /* color:#818181; */
+            }
+            .popUpHeader{
+                color:#818181;
+            }
+            .langHeading{
+                color:#fff8ee;
+                opacity: 50%;
+            }
+            .appHeading{
+                color:#fff8ee;
+                opacity: 50%;
+            }
+            #contact{
+                height:50vh;
+            }
+            .contactHeading{
+                color:#fff8ee;
+                opacity: 50%;
+            }
+            .langList{
+                display: flex;
+                flex-direction: row;
+                /* list-style-type: none; */
+                padding: 0;
+            }
+            .langList li{
+                margin-right: 10px;
+            }
+            .modal-content{
+                border-radius: 1.5rem;
+            }
+            .imgModal{
+                /* max-height:350px ; */
+            }
+            .iconImg{
+                max-width:50px;
+            }
+            .appCon{
+                border-radius: 10px;
+                border:2px solid #fff8ee;
+                /* width:20rem; */
+                /* min-width: 180px; */
+            }
+            .appIcon{
+                max-width: 40px;
+                min-width: 40px;
+                width: 100%;
+            }
+            .appSoftware .owl-item.active{
+                width:unset !important;
+            }
 
-.tiles__overlay{
-    width: 20vmin;
-    height:20vmin;
-    color:blanchedalmond;
-    
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    /* transition:opacity 0.3s; */
-    /* width:100%;
-    height:100%; */
-}
-.tiles:hover{
-    background: orange;
-    /* opacity:0.85; */
-}
-.tiles__overlay:hover{
-    color:black;
-}
+            @media (min-width: 0px) {
+                .fs-20{
+                    font-size: calc(20px);
+                }
+                .fs-22{
+                    font-size: calc(22px);
+                }
+                .fs-60{
+                    font-size: calc(40px);
+                }
+                .fs-80{
+                    font-size: calc(80px*0.567);
+                }
+                .sideMenuOpt {
+                    width:100%;
+                }
+                .parallax-header{
+                    background-image: url("../songxenhwa.github.io-main/img/webpage/codes-425x283.jpg");
+                }
+                .modal-dialog{
+                    max-width: 90%;
+                }
+            }
+            @media (min-width: 768px) {
+                .fs-20{
+                    font-size: calc(20px);
+                }
+                .fs-22{
+                    font-size: calc(22px);
+                }
+                .fs-60{
+                    font-size: calc(60px);
+                }
+                .fs-80{
+                    font-size: calc(80px*0.71111);
+                }
+                .sideMenuOpt {
+                    width:35%;
+                }
+                .parallax-header{
+                    background-image: url("../songxenhwa.github.io-main/img/webpage/codes-1000x667.jpg");
+                }
+                .modal-dialog{
+                    max-width: 80%;
+                }
+            }
+            @media (min-width: 1440px) {
+                .fs-20{
+                    font-size: calc(20px);
+                }
+                .fs-22{
+                    font-size: calc(22px);
+                }
+                .fs-60{
+                    font-size: calc(60px);
+                }
+                .fs-80{
+                    font-size: calc(80px);
+                }
+                .sideMenuOpt {
+                    width:25%;
+                }
+                .parallax-header{
+                    background-image: url("../songxenhwa.github.io-main/img/webpage/codes-3500x2333.jpg");
+                }
+                .modal-dialog{
+                    max-width: 70%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="">
+            <div class="menuOpt position-fixed"><span class="text-light"style="font-size:30px;cursor:pointer" >&#9776;</span></div>
 
-.tiles__overlay > p{
-    font-size: 3vmin;
-}
-.mySkills{
-    text-align: center;
-    font-size: 21px;
-}
-ul{
-    columns:4;
-}
+            <div class="parallax-header">
+                <div class="h-100 w-100 parallax-overlay-header"></div>
+                <!-- <div class="menuOpt position-absolute"><span class="text-light"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></div> -->
+                <div class="parallax-header-title position-absolute text-light w-100"><span class="fs-80 fw-semibold">SONG XEN HWA</span></div>
+            </div>
 
-li{
-    /* padding:2px; */
-    padding-right:10px;
-    text-align: left;
-}
-h3{
-    color:orange;
-}
+            <div class="container-1440">
+                <section id="about-me" >
+                    <div class="d-flex align-items-center h-100">
+                        <div class="text-light d-flex flex-column px-3 mx-sm-5 px-sm-5 ">
+                            <div class="my-3">
+                                <img class="about-me-img" src="../songxenhwa.github.io-main/img/webpage/kermit-adore-2.png">
+                            </div>
+                            <div class="fs-20 about-me-name mt-2">
+                                <span>
+                                    SONG XEN HWA
+                                </span>
+                            </div>
+                            <div class="fs-60 about-me-role mb-1 d-flex flex-wrap">
+                                <span class="auto-type"></span>Developer
+                                <!-- <span>Developer</span> -->
+                            </div>
+                            <div class="fs-22 about-me-desc mt-4 mb-3 d-flex flex-column">
+                                <span>Identifiable branding + an engaging user experience is key to increasing connection between business & audience.
+                                    </span>
+                                <br>
+                                <span>I build interactive websites that work seamlessly across all devices, with a focus on journey, user engagement and lead generation.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br><br><br>
+                <br><br><br>
+                <section id="projects" class="pt-1">
+                    <div class="px-3 mx-sm-5 px-sm-5">
+                        <div class="projHeading">
+                            <span class="fs-60">Projects </span>
+                        </div>
+                        <div class="projCon mt-5 pt-5">
+                            <div class="projCard mx-md-5 px-4 px-sm-5 mb-5">
+                                <div class="d-flex flex-column py-3 text-light">
+                                    <span class="projCardTitle fw-bold fs-22 my-2">Android Music Application</span>
+                                    <span class="mb-4">A simple music application for Android operating system</span>
+                                    <div id ="android" class="projCardBtn col-2 mb-2 d-flex justify-content-center align-items-center">DETAILS</div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="projCard mx-md-5 px-4 px-sm-5 mb-5">
+                                <div class="d-flex flex-column py-3 text-light">
+                                    <span class="projCardTitle fw-bold fs-22 my-2">Next-Gen Virtual Classroom</span>
+                                    <span class="mb-4">An API of a "ZOOM" like video conferencing web-application</span>
+                                    <div id ="virtual" class="projCardBtn col-2 mb-2 d-flex justify-content-center align-items-center">DETAILS</div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="projCard mx-md-5 px-4 px-sm-5 mb-5">
+                                <div class="d-flex flex-column py-3 text-light">
+                                    <span class="projCardTitle fw-bold fs-22 my-2">Tsunami Detection Simulator</span>
+                                    <span class="mb-4">A programme to determine the processing capabilities of various processors in various operating environment</span>
+                                    <div id ="tsunami" class="projCardBtn col-2 mb-2 d-flex justify-content-center align-items-center">DETAILS</div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="projCard mx-md-5 px-4 px-sm-5 mb-5">
+                                <div class="d-flex flex-column py-3 text-light">
+                                    <span class="projCardTitle fw-bold fs-22 my-2">Zombie Game</span>
+                                    <span class="mb-4">A 2D game created using JAVA with the implementetion of Object-Oriented Programming (OOP).</span>
+                                    <div id ="zombie" class="projCardBtn col-2 mb-2 d-flex justify-content-center align-items-center">DETAILS</div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="projCard mx-md-5 px-4 px-sm-5 mb-5">
+                                <div class="d-flex flex-column py-3 text-light">
+                                    <span class="projCardTitle fw-bold fs-22 my-2">Pong Game</span>
+                                    <span class="mb-4">A pong game design using ../songxenhwa.github.io-main../songxenhwa.github.io-main. which support single and multiplayer mode.</span>
+                                    <div id ="pong" class="projCardBtn col-2 mb-2 d-flex justify-content-center align-items-center">DETAILS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br><br><br>
+                <br><br><br>
+                <section id="languages" class="pt-5">
+                    <div class="px-3 mx-sm-5 px-sm-5">
+                        <div class="langHeading">
+                            <span class="fs-60">Languages </span>
+                        </div>
+                        <div class="projCon mt-5 pt-sm-5 ps-4 ps-sm-none text-light">
+                            <div class="text-light d-flex flex-column px-3 mx-md-5 px-md-5 ">
+                                <div class="row mb-3 d-flex flex-wrap">
+                                    <div class="p-0 col-6 col-sm-3"><li>HTML</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>jQuery</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>Ajax</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>PHP</li></div>
+                                </div>
+                                <div class="row mb-3 d-flex flex-wrap">
+                                    <div class="p-0 col-6 col-sm-3"><li>Python</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>Java</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>JavaScript</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>Bootstrap</li></div>
+                                </div>
+                                <div class="row mb-3 d-flex flex-wrap">
+                                    <div class="p-0 col-6 col-sm-3"><li>mySQL</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>Android Development</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>SQL</li></div>
+                                    <div class="p-0 col-6 col-sm-3"><li>C</li></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br><br><br>
+                <br><br><br>
+                <section id="applications" class="pt-5">
+                    <div class="px-3 mx-sm-5 px-sm-5">
+                        <div class="appHeading">
+                            <span class="fs-60">Applications </span>
+                        </div>
+                        <div class="projCon mt-5 pt-5 text-light">
+                            <div class="d-flex">
+                                <div class="owl-carousel appSoftware owl-theme pt-2 ">
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="ps-2">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-visual-studio-code-2019.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2 ">
+                                                Microsoft Visual Studios
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-android-studio.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                Android Studios
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-figma.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                Figma
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-pycharm.png" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                Pycharm
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-github.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                GitHub
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-linux.png" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                Linux
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-firebase.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                Firebase
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-intellij-idea.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                IntelliJ
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-mongodb.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                MongoDB
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-oracle-logo.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                Oracle
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-eclipse.png" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                Eclipse
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appCon me-2">
+                                        <div class="d-flex p-3 text-nowrap">
+                                            <div class="">
+                                                <img src="../songxenhwa.github.io-main/img/icon/icon-postman-api.svg" class="appIcon">
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                Postman API
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br><br><br>
+                <br><br><br>
+                <section id="contact" class="pt-5">
+                    <div class="px-3 mx-sm-5 px-sm-5">
+                        <div class="contactHeading">
+                            <span class="fs-60">Contact </span>
+                        </div>
+                        <div class="projCon mt-3 text-light d-flex flew-wrap">
+                            <div class="px-3">
+                                <a href="https://github.com/songxenhwa" target="_blank"><img src="../songxenhwa.github.io-main/img/icon/icon-github.svg" class="iconImg"></a>
+                            </div>
+                            <div class="pe-3">
+                                <a href="https://www.linkedin.com/in/xenhwasong" target="_blank"><img src="../songxenhwa.github.io-main/img/icon/icon-linkedin.svg" class="iconImg"></a>
+                            </div>
+                            <div class="">
+                                <img src="../songxenhwa.github.io-main/img/icon/icon-email.svg" id="emailIcon" class="iconImg">
+                            </div>
 
-.popUp{
-    /* display:flex; */
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
-    /* visibility:collapse; */
-    justify-content: center;
-    margin-top:20px;
-    margin-bottom: 20px;
-    font-size: 2.5vmin;
-    /* margin-left:10px; */
-    /* width:80vw; */
-}
-
-.popUpHeading{
-    width:80vw;
-    text-align: left;
-    background:orange;
-    color:black;
-    padding-left:30px;
-    padding-right: 30px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-.popUpContent{
-    width:80vw;
-    text-align:left;
-    padding-left:30px;
-    padding-right: 30px;
-    background:rgb(30, 30, 30) ;
-    color:white;
-    padding-bottom:30px;
-    padding-top: 15px;
-}
-
-.popUpContentImg{
-    display:flex;
-    flex-wrap:wrap;
-    padding-left:20px;
-    padding-right: 30px;
-    align-items: flex-start;
-}
-
-.popUpImg{
-    max-width: 20vw;
-    width:80vw;
-    /* gap: 8px;; */
-    margin: 8px;
-}
-.ulContent{
-    columns: 1;
-}
-
-.hobbyTiles{
-    position:relative;
-    height: 430px;
-    overflow: hidden;
-}
-
-
-/* id */
-#name{
-    font-size: 22px;
-    color: orange;
-}
-
-#current{
-    color: white;
-    font-size: 22px;
-} 
-
-#aboutMeTitle{
-    /* background:#000000 ; */
-    color:orange;
-    font-size: 18px;
-}
-
-#content{
-    /* background:orange;
-    opacity:80%;
-    width:70%; */
-    width: 100vmin;
-    /* justify-content: center; */
-    text-align:left;
-    /* top right bottom left */
-    /* padding: 10px 20px 10px 30px; */
-    padding:10px;
-    /* font-size: 20px; */
-    color:white;
-}
-
-#projectHeading{
-    color:orange;
-}
-
-#popUpContainer {
-    display:none;
-    justify-content:center;
-}
-#proj1, #proj2,#proj3, #proj4,#proj5{
-    /* padding:10px; */
-    /* vertical-align: middle; */
-    display:none;
-}
-
-#skillHeading{
-    color:orange;
-}
-
-#skills{
-    display: flex;
-    justify-content:center ;
-    text-align: left;
-    /* width:80vw; */
-    font-size: 2.5vmin;
-}
-
-
-#image-track {
-  display: flex;
-  gap: 4vmin;
-  position: absolute;
-  /* left: 20%;
-  top: 0%; */
-  transform: translate(15%, 0%); 
-  user-select: none; /* -- Prevent image highlighting -- */
-}
-
-#image-track > .image {
-  /* width: 35vmin;
-  height: 50vmin; */
-  width:300px;
-  height: 400px;
-  object-fit: cover;
-  object-position: 100% center;
-  opacity: 0.8;
-}
-
-
-
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
-</head>
-
-
-<body>
-    <script src = "main.js"></script>
-    <div class = "introduction">
-        <div id = "name">
-            <h1 style="text-align: center">Song Xen Hwa</h1>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-        <div id = current>
-            <p style="text-align: center">Advanced Computer Science Graduate from Monash University</p>
-        </div>
-    </div>
-
-    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
-
-    <div class="aboutMe">
-        <div id = aboutMeTitle>
-            <h1>About Me</h1>
-        </div>
-        <div class = aboutMeContent>
-            <div class = aboutMeImg>
-                <img style="width:35vmin; margin-top:-10px;" src="Photo.jpeg">
-            </div>
-            <div id = content >
-                <h3 style="color:white; font-size: 30px;"  > My name is Song Xen Hwa, and a Computer Science graduate. I do and enjoy designing, coding & developing.</h3>
-                <p align="justify">
-                    A recent gradute from Monash Univeristy Clayton with a bachelor of Computer Science degree specialising in advanced computer science. I am familiar with various programming languages particularly Python & Java. I love channeling my creativity in developing & designing applications. 
-                    <br><br>I was a frequent volunteer throughout my university period. I promoted & shared the wonders & joy of university life to the students by holding weekly events throughout the semester. Also guided famillies and guests around the graduation venue to ensure event success as an ambassador.
-                    </p>
-                <br>
-                <a href="https://github.com/songxenhwa" target="_blank" ><img class="image" style="width:60x;height:60px;" src="githubIcon.png"></a>
-                <a href="https://www.linkedin.com/in/xenhwasong/" target="_blank"><img class="image" style="width:60x;height:60px;" src="linkeInLogo.png"></a>
-            </div>
+        <div id="menu-opt" class="sideMenuOpt bg-dark">
+            <a href="javascript:void(0)" class="closebtn" >&times;</a>
+            <a href="#" class="opt">Top</a>
+            <a href="#about-me" class="opt">About Me</a>
+            <a href="#projects" class="opt">Projects</a>
+            <a href="#languages" class="opt">Languages</a>
+            <a href="#applications" class="opt">Applications</a>
+            <a href="#" class="opt">Skills</a>
+            <a href="#contact" class="opt">Contacts</a>
         </div>
 
-    </div>
-
-    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
-
-    <div class = myProjects>
-        <div id = projectHeading>
-            <h2> My Projects</h2>
-        </dv>
-        <div class = projectTiles>
-
-            <div class = tiles onclick="openPopUp('proj1')">
-                <div class = tiles__overlay>
-                    <p>Next-Gen Virtual Classroom</p>
-                </div>
-            </div>
-
-            <div class = tiles onclick="openPopUp('proj2')">
-                <div class = tiles__overlay>
-                    <p>Android Music Application</p>
-                </div>
-            </div>
-            
-            <div class = tiles onclick="openPopUp('proj3')">
-                <div class = tiles__overlay>
-                    <p>Tsunami Detection Simulator</p>
-                </div>
-            </div>
-            
-            <div class = tiles onclick="openPopUp('proj4')">
-                <div class = tiles__overlay>
-                    <p>Zombie Game</p>
-                </div>
-            </div>
-
-            <div class = tiles onclick="openPopUp('proj5')">
-                <div class = tiles__overlay >
-                    <p>Pong Game</p>
-                </div>
-            </div>
-
-         
-    
-            <div class = popUp id = "proj1">
-                <div class="popUpHeading">
-                    <h2>Next-Gen Virtual Classroom</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">A web application replica of the zoom application. This project was developed in a team of 4 to develop middleware (API). A basic webpage is created to test the functionality. The team collaborated with the front-end and back-end team throughout the development period to replicate the ZOOM application. 
-                        <br><br> Features of project includes:
-                        <ul style="columns:1;">
-                            <li>Messaging</li>
-                            <li>Webcam</li>
-                            <li>Microphone</li>
-                            <li>Creating Breakout Rooms</li>
-                            <li>Screen Sharing</li>
-                            <li>Subscribing to User</li>
-                        </ul>
-                    </p>
-                    <h3>Programming Skills</h3>
-                    <ul >
-                        <li>Linux</li>
-                            <li>JavaScript</li>    
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>MediaSoup API</li>
-                            <li>TypeScript</li>
-                            
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Familiarising myself with the usage of Linux system commands</li>
-                        <li>Learning TypeScript</li>    
-                        <li>Implementing MediaSoup into the project</li>
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <img class="popUpImg" src="next-gen virtual classroom.jpg">
-                        <img class="popUpImg" src="next-gen virtual classroom2.jpg">
+        <div class="modal fade modal-dialog-scrollable" id="android-modal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark popUpModal text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-5" id="myModalLabel" style="color:#40f384">Android Music Application</h5>
+                        <button class="btn-close crsbtn" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mx-5">
+                        <div>An android-based music application. It is still currently under development. Users can play music directly imported from device's files. Does not support streaming</div>
+                        <div class="pt-3"> 
+                            <div class="popUpHeader">Languages/ Software</div>
+                            <div class="mt-1">
+                                <ul>
+                                    <li>Java</li>
+                                    <li>Android Development</li>
+                                    <li>Android Studios</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="popUpHeader">Images</div>
+                            <div class="owl-carousel projImg owl-theme pt-2 ">
+                                <img src="../songxenhwa.github.io-main/img/proj/music-app1.jpg" class="imgModal item">
+                                <img src="../songxenhwa.github.io-main/img/proj/music-app2.jpg" class="imgModal item">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class=" btn text-light projModalBtn col-2 mb-2 d-flex justify-content-center align-items-center" data-bs-dismiss="modal">Close</div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class = popUp id = "proj2">
-                <div class="popUpHeading">
-                    <h2>Android Music Application</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">An android-based music application. It is still currently under development. Users can play music directly imported from device's files. Does not support streaming. 
-                        <br><br> Upcoming features: 
-                        <ul style="columns:1;">
-                            <li>Songs seperated by albums</li>
-                            <li>Creating playlists</li>
-                            <li>Searching songs</li>
-                        </ul>
-                    </p>
-                    <h3>Programming Skills</h3>
-                    <ul >
-                        <li>Java</li>    
-                        <li>Android Development</li>
-                        <li>Android Studios</li>
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Learning and developing the functionalities</li> 
-                        <li>Retrieving & displaying the album image of the songs</li>
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <img class="popUpImg" src="music-app1.jpg">
-                        <img class="popUpImg" src="music-app2.jpg">
+        <div class="modal fade modal-dialog-scrollable" id="virtual-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content bg-dark popUpModal text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-5" id="myModalLabel" style="color:#40f384">Next-Gen Virtual Classroom</h5>
+                        <button class="btn-close crsbtn" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mx-5">
+                        <div>A web application replica of the zoom application. This project was developed in a team of 4 to develop middleware (API). A basic webpage is created to test the functionality. The team collaborated with the front-end and back-end team throughout the development period to replicate the ZOOM application</div>
+                        <div class="pt-3"> 
+                            <div class="popUpHeader">Languages/ Software</div>
+                            <div class="mt-1">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>TypeScript</li>
+                                    <li>MediaSoup API</li>
+                                    <li>Linux</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="popUpHeader">Images</div>
+                            <div class="owl-carousel projImg owl-theme pt-2 ">
+                                <img src="../songxenhwa.github.io-main/img/proj/next-gen virtual classroom.jpg" class="imgModal item">
+                                <img src="../songxenhwa.github.io-main/img/proj/next-gen virtual classroom2.jpg" class="imgModal item">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class=" btn text-light projModalBtn col-2 mb-2 d-flex justify-content-center align-items-center" data-bs-dismiss="modal">Close</div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class = popUp id = "proj3">
-                <div class="popUpHeading">
-                    <h2>Tsunami Detection Simulation</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">A simulator which allows users to input values and produces a log text file consisting of the results of the simulation.
-                        This project was created to test the efficiency of parallel computing 
-                        by using 3 different machine/OS with similiar number of core processors.
-                        The time taken to complete the number of iterations are the result of efficiency and is noted in the log file output.
-                        User can set: 
-                        <ul style="columns:1;">
-                            <li>Number of rows when arranging the grid</li>
-                            <li>Number of columns when arranging the grid</li>
-                            <li>Number of iterations the base station should perform</li>
-                            <li>Sea water column height threshold in metres</li>
-                        </ul>
-                    </p>
-                    <h3>Programming Skills</h3>
-                    <ul >
-                        <li>Linux</li> 
-                        <li>C++</li>
-                        <li>Shell</li>    
-                        <li>CMake</li>
-                        <li>Virtual Machine</li>  
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Implementing parallel programming into the project</li>
-                        <li>First time using C++ to develop a project</li>  
-                        <li>Linux virtual machine slow performance </li>  
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <p>No Image</p>
+        <div class="modal fade modal-dialog-scrollable" id="tsunami-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark popUpModal text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-5" id="myModalLabel" style="color:#40f384">Tsunami Detection Simulator</h5>
+                        <button class="btn-close crsbtn" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-            </div>
-
-            <div class = popUp id = "proj4">
-                <div class="popUpHeading">
-                    <h2>Zombie Game</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">A 2D Zombie-themed game developed using Java language implementing object-oriented programming (OOP).
-                        The game was developed after designing it with a UML diagram. 
-                        There are two maps where player can traverse between. There are weapons player can use to kill the zombie which roams around the map.
-                        <br><br>Each turn users are allowed to select their action from a list provided. Action list varies from moving & collecting food/weapons to attacking the zombies.
-                        There are trees and fence on the map which can be use to player advantage to beat the game. Player can also farm which will bear fruits after a few turns. Fruits can be eaten to restore player's health. Besides attacking the zombies physically, player can set trap to kill the zombies.
-                        <br><br>A boss, "Mambo Marie" will appear after a few turns with a higher max health compared to other relatives zombies.
-                    </p>
-                    <h3>Programming Skills</h3>
-                    <ul >
-                        <li>Java</li>    
-                        <li>Object-Oriented Programming</li>
-                        <li>Eclipse IDE</li>
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Implementing Object-oriented programming (OOP)</li>
-                        <li>Designing the UML diagram of the game</li>
-                        <li>Too many Java files making it confusing to identify the parent and inheritance class</li>    
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <img class="popUpImg" src="zombieMap.jpg">
-                        <img class="popUpImg" src="zombieActionList.jpg">
-                        <img class="popUpImg" src="ZombieClassDiag.png">
-                        <img class="popUpImg" src="ZombieEngClassDiag.png">
+                    <div class="modal-body mx-5">
+                        <div>A simulator which allows users to input values and produces a log text file consisting of the results of the simulation. This project was created to test the efficiency of parallel computing by using 3 different machine/OS with similiar number of core processors. The time taken to complete the number of iterations are the result of efficiency and is noted in the log file output. User can set:
+                            <ul>
+                                <li>Number of rows when arranging the grid</li>
+                                <li>Number of columns when arranging the grid</li>
+                                <li>Number of iterations the base station should perform</li>
+                                <li>Sea water column height threshold in metres</li>
+                            </ul>
+                        </div>
+                        <div class="pt-3"> 
+                            <div class="popUpHeader">Languages/ Software</div>
+                            <div class="mt-1">
+                                <ul>
+                                    <li>C++</li>
+                                    <li>CMake</li>
+                                    <li>Shell</li>
+                                    <li>Linux</li>
+                                    <li>Virtual Machine</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="popUpHeader">Images</div>
+                            <div class="owl-carousel projImg owl-theme pt-2 ">
+                                <img src="../songxenhwa.github.io-main/img/proj/music-app1.jpg" class="imgModal item">
+                                <img src="../songxenhwa.github.io-main/img/proj/music-app2.jpg" class="imgModal item">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class = popUp id = "proj5">
-                <div class="popUpHeading">
-                    <h2>Pong Game</h2>
-                </div>
-                <div class = popUpContent>
-                    <p align="justify">A basic one-player pong game with a paddle movable by keyboard. The second paddle (right/ opponent) will follow the ball.
-                        <br><br>The ball will bounce of a random direction when hit by the paddle. Besides direction, the speed of the ball will also differs when hit at a certain angle. 
-                        <br><br>To win, player will have to score 7 points against the opponent. Player will be able to restart after the game finishes. </p>
-                    <h3>Programming Skills</h3>
-                    <ul>
-                        <li>JavaScript</li>
-                            <li>TypeScript</li>    
-                            <li>HTML</li>
-                            <li>CSS</li>
-                    </ul>
-                    <h3>Challenges Faced</h3>
-                    <ul class = ulContent>
-                        <li>Learning JavaScript and TypeScript</li>  
-                        <li>Using RxJS Observable streams to handle animations and user interactions</li>    
-                        <li>Using proper functional programming style</li>
-                    </ul>
-                    <h3>Images</h3>
-                    <div class="popUpContentImg">
-                        <img class="popUpImg" src="pongGame.jpg">
+                    <div class="modal-footer">
+                        <div class=" btn text-light projModalBtn col-2 mb-2 d-flex justify-content-center align-items-center" data-bs-dismiss="modal">Close</div>
                     </div>
                 </div>
             </div>
         </div>
         
-    </div>
-    
-    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
-
-
-    <div class = mySkills>
-        <div id = skillHeading>
-            <h2> Skills</h2>
+        <div class="modal fade modal-dialog-scrollable" id="zombie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content bg-dark popUpModal text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-5" id="myModalLabel" style="color:#40f384">Zombie Game</h5>
+                        <button class="btn-close crsbtn" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mx-5">
+                        <div>A 2D Zombie-themed game developed using Java language implementing object-oriented programming (OOP). The game was developed after designing it with a UML diagram. There are two maps where player can traverse between. There are weapons player can use to kill the zombie which roams around the map.
+                            <br><br>
+                            Each turn users are allowed to select their action from a list provided. Action list varies from moving & collecting food/weapons to attacking the zombies. There are trees and fence on the map which can be use to player advantage to beat the game. Player can also farm which will bear fruits after a few turns. Fruits can be eaten to restore player's health. Besides attacking the zombies physically, player can set trap to kill the zombies.
+                            <br><br>
+                            A boss, "Mambo Marie" will appear after a few turns with a higher max health compared to other relatives zombies.
+                        </div>
+                        <div class="pt-3"> 
+                            <div class="popUpHeader">Languages/ Software</div>
+                            <div class="mt-1">
+                                <ul>
+                                    <li>Java</li>
+                                    <li>Object-Oriented Programming</li>
+                                    <li>Eclipse IDE</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="popUpHeader">Images</div>
+                            <div class="owl-carousel projImg owl-theme pt-2 ">
+                                <img src="../songxenhwa.github.io-main/img/proj/zombieMap.jpg" class="imgModal item">
+                                <img src="../songxenhwa.github.io-main/img/proj/zombieActionList.jpg" class="imgModal item">
+                                <img src="../songxenhwa.github.io-main/img/proj/ZombieClassDiag.png" class="imgModal item">
+                                <img src="../songxenhwa.github.io-main/img/proj/ZombieEngClassDiag.png" class="imgModal item">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class=" btn text-light projModalBtn col-2 mb-2 d-flex justify-content-center align-items-center" data-bs-dismiss="modal">Close</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id = skillHeading>
-            <h3> Languages</h3>
+
+        
+        <div class="modal fade modal-dialog-scrollable" id="pong-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark popUpModal text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-5" id="myModalLabel" style="color:#40f384">Pong Game</h5>
+                        <button class="btn-close crsbtn" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mx-5">
+                        <div>A basic one-player pong game with a paddle movable by keyboard. The second paddle (right/ opponent) will follow the ball.
+                            <br><br>
+                            The ball will bounce of a random direction when hit by the paddle. Besides direction, the speed of the ball will also differs when hit at a certain angle.
+                            <br><br>    
+                            To win, player will have to score 7 points against the opponent. Player will be able to restart after the game finishes.
+                        </div>
+                        <div class="pt-3"> 
+                            <div class="popUpHeader">Languages/ Software</div>
+                            <div class="mt-1">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>TypeScript</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="popUpHeader">Images</div>
+                            <div class="owl-carousel projImg owl-theme pt-2 ">
+                                <img src="../songxenhwa.github.io-main/img/proj/pongGame.jpg" class="imgModal item">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class=" btn text-light projModalBtn col-2 mb-2 d-flex justify-content-center align-items-center" data-bs-dismiss="modal">Close</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id = skills>
-            <ul>
-                <li>Python</li>
-                <li>Java</li>    
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>NodeJs</li>
-                <li>Android Development</li>
-                <li>MongoDB</li>  
-                <li>JavaScript</li>  
-                <li>TypeScript</li>    
-                <li>C++</li>
-                <li>Angular</li>
-                <li>User Interface Design</li>
-                <li>Database Queries</li>
-                <li>SQL</li>  
-                <li>NoSQL</li>
-                <li>Git</li>  
+        <script src="../songxenhwa.github.io-main/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../songxenhwa.github.io-main/lib/js/jquery-3.6.2.min.js"></script>
+        <script src="../songxenhwa.github.io-main/lib/js/owl-carousel/owl.carousel.min.js"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script type="text/javascript">
+            // function openNav() {
+            //     document.getElementById("menu-opt").removeClass('d-none');
+            // }
+            // function closeNav() {
+            //     document.getElementById("menu-opt").style.width = "0";
+            // }
+
+		    $(document).ready(function(){
+                var typed = new Typed('.auto-type', {
+                    strings:["Web","Software", "Mobile"],
+                    typeSpeed:150,
+                    backSpeed:100,
+                    loop:true
+                })
+            
+                $('.menuOpt').on('click',function(){
+                    // if ($('#menu-opt').hasClass('d-none')) {
+                    //     console.log(12345)
+                    $("#menu-opt").css({
+                        "display": "block"})
+                    // } 
+                })
+                $('.closebtn').on('click', function(){
+                    $("#menu-opt").css("display", "none");
+
+                })
+                $('.opt').on('click', function(){
+                    $("#menu-opt").css("display", "none");
+                });
+
+                $('.projCardBtn').on('click',function(){
+                    var modalId = $(this).attr('id');
+                    console.log(modalId);
+                    $('#' + modalId + '-modal').modal('show');
+                    // $('#tsunami').removeClass('hide');
+                    // $('#tsunami').addClass('block');
+                })
+
+                $('.projImg').owlCarousel({
+                    loop:false,
+                    margin:10,
+                    dots:true,
+                    responsive:{
+                        0:{
+                            items:1,
+                            dots:true,
+                        },
+                        600:{
+                            items:3
+                        },
+                        1000:{
+                            items:4
+                        }
+                    }
+                })
+                $('.appSoftware').owlCarousel({
+                    loop:true,
+                    margin:10,
+                    dots:true,
+                    responsive:{
+                        0:{
+                            items:2,
+                            dots:true,
+                        },
+                        600:{
+                            items:2
+                        },
+                        1000:{
+                            items:3
+                        },
+                        1200:{
+                            items:4
+                        }
+                    }
+                })
                 
-            </ul>
-        </div>
-        <div id = skillHeading>
-            <h3> Applications</h3>
-        </div>
-        <div id = skills>
-            <ul>
-                <li>Visual Studios</li>  
-                <li>Android Studio</li>
-                <li>Pycharm</li>
-                <li>Python IDLE</li>
-                <li>MongoDB Compass</li>  
-                <li>Google Firebase</li>  
-                <li>Figma</li>  
-                <li>Linux</li>
-                <li>GitHub</li>
-                <li>PostMan</li>
-                <li>Oracle Virtual Machine</li>
-                <li>IntelliJ IDEA</li>
-                <li>Eclipse IDE</li>
-                <li>Command Prompt</li>
-            </ul>
-        </div>
-    </div>
-    
-    
-    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
-    <!-- Hobbies -->
-    <div class = hobbies>
-        
-        <h2 style="color:orange;">Hobbies</h2>
-        <div class="hobbyTiles">
-            <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-                <img class="image" src="swimming.jpg" draggable="false" />
-                <img class="image" src="cycling.jpg" draggable="false" />
-                <img class="image" src="jogging.jpg" draggable="false" />
-                <img class="image" src="forza5.jpg" draggable="false" />
-                <img class="image" src="bench.webp" draggable="false" />
-                <img class="image" src="coding.jpeg" draggable="false" />
-                <img class="image" src="listenMusic.jpg" draggable="false" />
-                <img class="image" src="sunbathing.jpg" draggable="false" />
-              </div>
-        </div>
-        
-    </div>
-    <p style = "font-size: 2vmin;">**If slider not working refresh page**</p>
-    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
-    <!-- Extras -->
-    <h2 style="color:orange;">Extras</h2>
-    <hr style = "size:3px;color:orange;margin-left:10%;margin-right:10%">
-    <p style = "font-size:15px;">End Of Page. Thanks For Visiting!</p>
+                
+                $('#emailIcon').click(function() {
+                    var textToCopy = "xenhwasong@gmail.com";
 
-</body>
-</html>
+                    // Create a temporary input element
+                    var tempInput = $("<input>");
+                    tempInput.val(textToCopy);
+                    $("body").append(tempInput);
 
+                    // Select and copy the text
+                    tempInput.select();
+                    document.execCommand("copy");
 
-<script>
-    // global variable
-    //  let test = new Boolean(false)
-    function openPopUp(proj) {
-        
-        let temp = "";
-        let check = Boolean(false);
-        for (let i = 1; i <= 5;i++){
-            temp = 'proj' + i;
-            if (document.getElementById(temp).style.display == "block"){
-                check = Boolean(true);
-                break;
-            }
-        }
-        
-        document.getElementById(proj).style.display = "block";
-        if (check == Boolean(true)){
-            document.getElementById(temp).style.display = "none";
-            document.getElementById(proj).style.display = "block";
-            if (proj == temp){
-                document.getElementById(temp).style.display = "none";
-            }
-        }
-        
-        
-    }
+                    // Remove the temporary input element
+                    tempInput.remove();
 
+                    alert("E-mail copied to clipboard!");
+                });
 
-// find a way to scroll right till first pic mis in center
-const track = document.getElementById("image-track");
-
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
-
-const handleOnUp = () => {
-  track.dataset.mouseDownAt = "0";  
-  track.dataset.prevPercentage = track.dataset.percentage;
-}
-
-const handleOnMove = e => {
-  if(track.dataset.mouseDownAt === "0") return;
-  
-  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-        maxDelta = window.innerWidth / 2;
-  
-  const percentage = (mouseDelta / maxDelta) * -100,
-        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 15), -75);
-  
-  track.dataset.percentage = nextPercentage;
-  
-  track.animate({
-    transform: `translate(${nextPercentage}%, 0%)`
-  }, { duration: 1200, fill: "forwards" });
-  
-  for(const image of track.getElementsByClassName("image")) {
-    image.animate({
-      objectPosition: `${70 + nextPercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
-  }
-}
-
-window.onmousedown = e => handleOnDown(e);
-
-window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-window.onmouseup = e => handleOnUp(e);
-
-window.ontouchend = e => handleOnUp(e.touches[0]);
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
-
-</script>
-
+            });
+        </script>
+    </body>
+</html>	
