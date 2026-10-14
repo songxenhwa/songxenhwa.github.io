@@ -287,15 +287,15 @@
   line-height: 1.7;
 }
 
+.featured-content .project-tags {
+  margin-top: 22px;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   padding-bottom: 12px;
-}
-
-.featured-content .project-tags {
-  margin-top: 22px;
 }
 
 .project-tags span {
@@ -443,8 +443,73 @@
   color: var(--muted-text);
 }
 
+.skills-section{
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.skills-header{
+  display:grid;
+  grid-template-columns: 60% 40%;
+  align-items: end;
+
+  padding-bottom: 30;
+  border-bottom: 1px solid var(--border);
+}
+
+.skills-header h2{
+  color: var(--text);
+  font-size: clamp(25px, 3vw, 40px);
+}
+
+.skills-header span{
+  color: var(--muted-text);
+  font-size: 18px;
+}
+
+.skills-content{
+  padding-top: 30;
+  display:grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.skills-content h4{
+  color: var(--green);
+  /* padding-bottom: 8; */
+}
 
 
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 10;
+  padding-right: 40;
+}
+
+.skills-tags span {
+  padding: 7px 20px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  color: var(--text);
+  font-family: "DM Mono", monospace;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.skills-tags.core span{
+  padding: 7px 20px;
+
+  border: 1px solid var(--purple);
+  border-radius: 999px;
+
+  color: var(--text);
+  font-family: "DM Mono", monospace;
+  font-size: 18px;
+  white-space: nowrap;
+}
 
 /* mobile view */
 
@@ -459,8 +524,22 @@
     .menuBtn{display:block}
 
     .self{
+      padding: 0 20;
+      grid-template-columns: 1fr;
+    }
 
-      padding: 55px 0;
+    .button-work{
+      margin-bottom: 12;
+    }
+
+    .self-actions{
+      margin-bottom: 00;
+    }
+
+    .self-location{
+      padding: 30 0 60 0;
+      border-top: 1px solid var(--border);
+      border-left: none;
     }
 
     .hero-actions {
@@ -507,5 +586,22 @@
 
     .experience-body {
       grid-template-columns: 1fr;
+      padding: 20 20;
+    }
+
+    .skills-section{
+      padding: 0 20;
+    }
+
+    .skills-header{
+      grid-template-columns: 1fr;
+    }
+
+    .skills-content{
+      grid-template-columns: 1fr;
+    }
+
+    .skills-tags{
+      padding-bottom: 30;
     }
   }
